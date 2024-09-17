@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-17T23:30:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Monos</title><subtitle>Themed by ejjoo</subtitle><entry><title type="html">첫 블로그</title><link href="http://localhost:4000/react/js/2024/09/17/%EC%B2%AB-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%85%EB%8B%88%EB%8B%A4.html" rel="alternate" type="text/html" title="첫 블로그" /><published>2024-09-17T19:31:29+09:00</published><updated>2024-09-17T19:31:29+09:00</updated><id>http://localhost:4000/react/js/2024/09/17/%EC%B2%AB%20%EB%B8%94%EB%A1%9C%EA%B7%B8%20%EC%9E%85%EB%8B%88%EB%8B%A4</id><content type="html" xml:base="http://localhost:4000/react/js/2024/09/17/%EC%B2%AB-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%85%EB%8B%88%EB%8B%A4.html"><![CDATA[<h1 id="hi">hi</h1>
+
+<p>처음 쓰는 블로그 입니다.</p>
+
+<h1 id="test">test</h1>
+
+<h1 id="table">table</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>제목</th>
+      <th>내용</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>테스트1</td>
+      <td>테스트2</td>
+      <td>테스트3</td>
+    </tr>
+    <tr>
+      <td>테스트1</td>
+      <td>테스트2</td>
+      <td>테스트3</td>
+    </tr>
+    <tr>
+      <td>테스트1</td>
+      <td>테스트2</td>
+      <td>테스트3</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>xpdlqmf</p>
+</blockquote>
+
+<h2 id="1-213213">1. 213213</h2>
+<p>asdadsa</p>
+<h2 id="2-sadsadasd">2. sadsadasd</h2>
+<p>213213123</p>
+<h2 id="3-test">3. test</h2>
+<p>testest</p>
+<h2 id="4-code">4. code</h2>
+<h3 id="variable">variable</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 'test'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="function">function</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 'test'</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="react" /><category term="js" /><summary type="html"><![CDATA[hi]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/01/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-01-02T19:31:29+09:00</published><updated>2020-01-02T19:31:29+09:00</updated><id>http://localhost:4000/jekyll/update/2020/01/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/01/02/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">post-sample</title><link href="http://localhost:4000/sample/2020/01/02/post1.html" rel="alternate" type="text/html" title="post-sample" /><published>2020-01-02T19:20:23+09:00</published><updated>2020-01-02T19:20:23+09:00</updated><id>http://localhost:4000/sample/2020/01/02/post1</id><content type="html" xml:base="http://localhost:4000/sample/2020/01/02/post1.html"><![CDATA[<h1 id="post-sample">post-sample</h1>
+<blockquote>
+  <p>Hello!</p>
+</blockquote>
+
+<p>This is code</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">print</span> <span class="s1">'hello world'</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="sample" /><summary type="html"><![CDATA[post-sample Hello!]]></summary></entry></feed>
