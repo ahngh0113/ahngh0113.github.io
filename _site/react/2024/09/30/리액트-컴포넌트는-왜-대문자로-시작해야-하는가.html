@@ -102,56 +102,37 @@ The tag <code class="language-plaintext highlighter-rouge">&lt;bCompo&gt;</code>
 <p>아래의 코드는 우리가 흔히 사용하는 JSX문법을 사용한 리액트 코드이다.</p>
 
 <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ACompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-	<span class="k">return </span><span class="p">(</span>
-    	<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-           <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>ACompo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">)</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>ACompo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">)</span>
 <span class="p">}</span>
 
 <span class="kd">const</span> <span class="nx">BCompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return </span><span class="p">(</span>
-      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>BCompo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>BCompo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">)</span>
 <span class="p">}</span>
 
 <span class="kd">const</span> <span class="nx">CCompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-	<span class="k">return </span><span class="p">(</span>
-    	<span class="p">&lt;&gt;</span>
-          <span class="p">&lt;</span><span class="nc">ACompo</span><span class="p">/&gt;</span>
-          <span class="p">&lt;</span><span class="nt">bcompo</span><span class="p">/&gt;</span>
-        <span class="p">&lt;/&gt;</span>
-    <span class="p">)</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="p">&lt;&gt;</span>
+      <span class="p">&lt;</span><span class="nc">ACompo</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">bcompo</span><span class="p">/&gt;</span>
+    <span class="p">&lt;/&gt;</span>
+  <span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 <p>위의 코드는 babel의 <code class="language-plaintext highlighter-rouge">@babel-plugin-transform-react.jsx</code> 플러그인으로 인해 아래와 같은 코드로 변환된다.</p>
 
 <h2 id="변환-후-코드">변환 후 코드</h2>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">jsx</span> <span class="nx">as</span> <span class="nx">_jsx</span><span class="p">,</span> <span class="nx">Fragment</span> <span class="nx">as</span> <span class="nx">_Fragment</span><span class="p">,</span> <span class="nx">jsxs</span> <span class="nx">as</span> <span class="nx">_jsxs</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react/jsx-runtime</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">ACompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="cm">/*#__PURE__*/</span><span class="nf">_jsx</span><span class="p">(</span><span class="dl">"</span><span class="s2">div</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-    <span class="na">children</span><span class="p">:</span> <span class="cm">/*#__PURE__*/</span><span class="nf">_jsx</span><span class="p">(</span><span class="dl">"</span><span class="s2">p</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-      <span class="na">children</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ACompo</span><span class="dl">"</span>
-    <span class="p">})</span>
-  <span class="p">});</span>
-<span class="p">};</span>
-<span class="kd">const</span> <span class="nx">BCompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="cm">/*#__PURE__*/</span><span class="nf">_jsx</span><span class="p">(</span><span class="dl">"</span><span class="s2">div</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-    <span class="na">children</span><span class="p">:</span> <span class="cm">/*#__PURE__*/</span><span class="nf">_jsx</span><span class="p">(</span><span class="dl">"</span><span class="s2">p</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
-      <span class="na">children</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BCompo</span><span class="dl">"</span>
-    <span class="p">})</span>
-  <span class="p">});</span>
-<span class="p">};</span>
-<span class="kd">const</span> <span class="nx">CCompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="cm">/*#__PURE__*/</span><span class="nf">_jsxs</span><span class="p">(</span><span class="nx">_Fragment</span><span class="p">,</span> <span class="p">{</span>
-    <span class="na">children</span><span class="p">:</span> <span class="p">[</span><span class="cm">/*#__PURE__*/</span><span class="nf">_jsx</span><span class="p">(</span><span class="nx">ACompo</span><span class="p">,</span> <span class="p">{}),</span> <span class="cm">/*#__PURE__*/</span><span class="nf">_jsx</span><span class="p">(</span><span class="dl">"</span><span class="s2">bcompo</span><span class="dl">"</span><span class="p">,</span> <span class="p">{})]</span>
-  <span class="p">});</span>
-<span class="p">};</span>
-</code></pre></div></div>
 
-<p>위의 코드에서 <code class="language-plaintext highlighter-rouge">/*#__PURE__*/_jsx</code>와 <code class="language-plaintext highlighter-rouge">/*#__PURE__*/_jsxs</code>는 <code class="language-plaintext highlighter-rouge">React.createElement</code>로 생각하면 된다.</p>
+<p><img src="/public/img/jsx-after-babel.png" alt="babel로 변환 후의 코드" width="700px" height="600px" /></p>
+
+<p>위의 코드에서 <code class="language-plaintext highlighter-rouge">/*#__PURE__*/_jsx</code>는 <code class="language-plaintext highlighter-rouge">React.createElement</code>로 생각하면 된다.</p>
 
 <blockquote>
   <p>babel의 <a href="https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&amp;build=&amp;builtIns=false&amp;corejs=3.21&amp;spec=false&amp;loose=false&amp;code_lz=Q&amp;debug=false&amp;forceAllTransforms=false&amp;modules=false&amp;shippedProposals=false&amp;evaluate=false&amp;fileSize=false&amp;timeTravel=false&amp;sourceType=module&amp;lineWrap=true&amp;presets=env%2Creact&amp;prettier=false&amp;targets=&amp;version=7.25.6&amp;externalPlugins=&amp;assumptions=%7B%7D">Try it out</a>에서 직접 코드를 입력하여 확인해 볼 수 있다.</p>
@@ -161,8 +142,8 @@ The tag <code class="language-plaintext highlighter-rouge">&lt;bCompo&gt;</code>
 
 <p>그렇다면 번외로 처음부터 <code class="language-plaintext highlighter-rouge">createElement</code>로 작성해도 잘 동작할까?</p>
 
-<p><img src="/public/img/creating-an-element-without-JSX-code.png" height="500x" width="400px" />
-<img src="/public/img/creating-an-element-without-JSX-result.png" height="200x" width="200px" /></p>
+<p><img src="/public/img/creating-an-element-without-JSX-code.png" height="500px" width="500px" />
+<img src="/public/img/creating-an-element-without-JSX-result.png" height="300x" width="300px" /></p>
 
 <p>위의 그림과 같이 당연히(?) 잘 나오는 것을 볼 수 있다.
 그 이유는 위에서 말했듯이 우리가 작성한 <code class="language-plaintext highlighter-rouge">JSX문법</code>은 결국 <code class="language-plaintext highlighter-rouge">createElement</code>로 변환하여 사용되기 때문이다.</p>
@@ -172,7 +153,7 @@ The tag <code class="language-plaintext highlighter-rouge">&lt;bCompo&gt;</code>
 <p>그렇다면 본론으로 돌아와서 리액트 컴포넌트가 대문자만 사용 가능한 이유는 HTML태그와 컴포넌트를 분리하기 위해서 이다. 위의 변환 후 코드를 다시 살펴보자.</p>
 
 <blockquote>
-  <p><code class="language-plaintext highlighter-rouge">/*#__PURE__*/_jsx</code>와 <code class="language-plaintext highlighter-rouge">/*#__PURE__*/_jsxs</code>는 <code class="language-plaintext highlighter-rouge">createElement</code>로 바꾸었다.</p>
+  <p><code class="language-plaintext highlighter-rouge">/*#__PURE__*/_jsx</code>는 <code class="language-plaintext highlighter-rouge">createElement</code>로 바꾸었다.</p>
 </blockquote>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ACompo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
