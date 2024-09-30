@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-30T23:24:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">안기환</title><subtitle>프론트엔드 개발자</subtitle><entry><title type="html">리액트 컴포넌트는 왜 대문자로 시작해야 하는가?</title><link href="http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%99%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80.html" rel="alternate" type="text/html" title="리액트 컴포넌트는 왜 대문자로 시작해야 하는가?" /><published>2024-09-30T21:23:45+09:00</published><updated>2024-09-30T21:23:45+09:00</updated><id>http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94%20%EC%99%9C%20%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C%20%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC%20%ED%95%98%EB%8A%94%EA%B0%80</id><content type="html" xml:base="http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%99%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80.html"><![CDATA[<h1 id="목차">목차</h1>
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="안기환" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>안기환</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+  <div class="sidebar-brand">
+    <a href="/">안기환</a>
+  </div>
+  <p class="lead">프론트엔드 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+  <ul class="nav">
+    <li class="nav-title">Pages</li>
+    <li>
+      <a class="nav-item" href="/">Articles</a>
+    </li>
+         
+    <li>
+      <a class="nav-item" href="/about/"> About </a>
+    </li>
+              
+  </ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  <ul class="nav">
+    <li class="nav-title">Categories</li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#react"
+      >
+        <span class="name">react</span>
+        <span class="badge">1</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+
+		</div>
+		<div class="content">
+			<article class="post">
+  <header class="post-header">
+    <div class="post-title">리액트 컴포넌트는 왜 대문자로 시작해야 하는가?</div>
+    <time
+      class="post-date dt-published"
+      datetime="2024-09-30T21:23:45+09:00"
+      itemprop="datePublished"
+    >2024/09/30
+    </time>
+  </header>
+
+  <div class="post-content"><h1 id="목차">목차</h1>
 <ul>
   <li><a href="#에러-분석">1. 에러 분석</a></li>
   <li><a href="#reactcreateelement">2. React.createElement()</a></li>
@@ -138,4 +205,12 @@ The tag <code class="language-plaintext highlighter-rouge">&lt;bCompo&gt;</code>
 소문자로 시작된 것은 컴포넌트로 보지않고 HTML의 tag로 인지하여 문자열로 들어간다. 그래서 bCompo뿐만 아니라 div도 문자열로 들어가 있는 것이다. 대문자로 해야 우리가 작성한 함수가 그대로 들어가 컴포넌트 그대로를 인지할 수 있다.</p>
 
 <h1 id="결론">결론</h1>
-<p>babel은 JSX에서 대소문자로 컴포넌트와 HTML 태그를 구분하여 변환한다. 그래서 컴포넌트로 사용할 때에는 대문자로 사용해야 원하는 컴포넌트를 화면에 노출 될 수 있도록 해야한다.</p>]]></content><author><name></name></author><category term="react" /><summary type="html"><![CDATA[목차 1. 에러 분석 2. React.createElement() 3. babel을 통한 JSX문법 변환 3-1. JSX없이 엘리먼트 만들기 (createElement만으로 엘리먼트 만들기) 4. 대문자만 가능한 이유 5. 결론]]></summary></entry></feed>
+<p>babel은 JSX에서 대소문자로 컴포넌트와 HTML 태그를 구분하여 변환한다. 그래서 컴포넌트로 사용할 때에는 대문자로 사용해야 원하는 컴포넌트를 화면에 노출 될 수 있도록 해야한다.</p>
+</div>
+</article>
+
+
+		</div>
+	</div>
+  </body>
+</html>
