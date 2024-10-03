@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="안기환" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>안기환</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+  <div class="sidebar-brand">
+    <a href="/">안기환</a>
+  </div>
+  <p class="lead">프론트엔드 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+  <ul class="nav">
+    <li class="nav-title">Pages</li>
+    <li>
+      <a class="nav-item" href="/">Articles</a>
+    </li>
+         
+    <li>
+      <a class="nav-item" href="/about/"> About </a>
+    </li>
+              
+  </ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  <ul class="nav">
+    <li class="nav-title">Categories</li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#Next.js"
+      >
+        <span class="name">Next.js</span>
+        <span class="badge">2</span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#React"
+      >
+        <span class="name">React</span>
+        <span class="badge">1</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+
+		</div>
+		<div class="content">
+			<article class="post">
+  <header class="post-header">
+    <div class="post-title">2024-10-03-Nest.js에서 데이터 캐시하기 with App-Router</div>
+    <time
+      class="post-date dt-published"
+      datetime="2024-10-03T21:12:45+09:00"
+      itemprop="datePublished"
+    >2024/10/03
+    </time>
+  </header>
+
+  <div class="post-content"><h1 id="목차">목차</h1>
+<hr />
+
+<ul>
+  <li><a href="#일반-fetch-vs-nextjs-fetch">일반 fetch() vs Next.js fetch()</a></li>
+  <li><a href="#nextjs의-fetch-옵션">Next.js의 fetch() 옵션</a>
+    <ul>
+      <li><a href="#cache할-경우">cache할 경우</a></li>
+      <li><a href="#cache하지-않는-경우">cache하지 않는 경우</a></li>
+      <li><a href="#특정-시간-이후에-다시-fetch">특정 시간 이후에 다시 fetch</a></li>
+      <li><a href="#특정-요청이-들어-왔을-때에-다시-fetch">특정 요청이 들어 왔을 때에 다시 fetch</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="일반-fetch-vs-nextjs-fetch">일반 fetch() vs Next.js fetch()</h1>
+<hr />
+
+<p>Next.js에서는 fetch()함수로 데이터를 통신하는 것을 권장한다. 이 이유는 Next.js 기존 fetch의 확장판으로 커스텀 했기 때문이다. 일반 fetch와는 다르게 Next.js의 fetch()는 캐싱 및 성능 최적화 기능을 더해준다. 어떠한 기능이 있는지 살펴보자.</p>
+
+<h1 id="nextjs에서-fetch를-logging하는-법">Next.js에서 fetch를 logging하는 법</h1>
+<hr />
+
+<pre><code class="language-mjs">/** @type {import('next').NextConfig} */
+const nextConfig = {
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
+};
+
+export default nextConfig;
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">next.config.mjs</code>파일에 위와 같이 <code class="language-plaintext highlighter-rouge">logging</code>옵션을 추가해 주면 터미널에서 확인 할 수 있다.</p>
+
+<h1 id="nextjs의-fetch-옵션">Next.js의 fetch() 옵션</h1>
+<hr />
+
+<h2 id="cache할-경우">cache할 경우</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">cache</span><span class="p">:</span> <span class="dl">'</span><span class="s1">force-cach</span><span class="dl">'</span> <span class="p">})</span>
+</code></pre></div></div>
+<p>요청의 결과를 저장하는 옵션이다. 첫 요청을 제외하고는 위와 같이 fetch()가 있어도 통신을 하지 않고 저장된 데이터 값을 가져온다. 거의 변하지 않는 데이터를 렌더링할 때 사용하면 좋은 옵션이다.</p>
+
+<h2 id="cache하지-않는-경우">cache하지 않는 경우</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">cache</span><span class="p">:</span> <span class="dl">'</span><span class="s1">no-store</span><span class="dl">'</span> <span class="p">})</span>
+</code></pre></div></div>
+<p>요청의 결과를 저장하지 않는 옵션이다. <code class="language-plaintext highlighter-rouge">{ cache: 'no-store' }</code>를 두번째 인자에 넣어주면 된다. 이러면 페이지 진입할 때마다 fetch()를 진행한다. 실시간성 데이터가 렌더링 될 때 사용하면 적합한 옵션이다.<br />
+옵션의 기본 값으로 옵션에 아무런 설정을 하지 않으면 <code class="language-plaintext highlighter-rouge">{ cache: 'no-store' }</code>처럼 동작한다.<br />
+<strong>(* v15이전 버전은 캐싱하는 것을 기본으로 설정되었으나 사용자가의 불만이 많아 v15부터는 캐싱하지 않는 것이 default이다.)</strong></p>
+
+<h2 id="특정-시간-이후에-다시-fetch">특정 시간 이후에 다시 fetch</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">next</span><span class="p">:</span> <span class="p">{</span> <span class="na">revalidate</span><span class="p">:</span> <span class="mi">3</span> <span class="p">}</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<p>Page-Router의 ISR과 같이 특정 시간을 주기로 캐시를 업데이트 하는 방식이다. 가끔 데이터가 업데이트 될 때 사용하면 적합한 옵션이다. revalidate안에 들어갈 숫자는 초단위이다.</p>
+
+<h2 id="특정-요청이-들어-왔을-때에-다시-fetch">특정 요청이 들어 왔을 때에 다시 fetch</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">next</span><span class="p">:</span> <span class="p">{</span> <span class="na">tags</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">]}})</span>
+</code></pre></div></div>
+<p>Page-Router의 On-Demand ISR과 비슷한 방식이다. 처음 요청 시 데이터를 캐시하고, 특정 요청 시 있을 때 갈아끼우는 형식이다. 가끔 변하는 데이터를 핸들링할 때 편리한 옵션이다.</p>
+</div>
+</article>
+
+
+		</div>
+	</div>
+  </body>
+</html>
