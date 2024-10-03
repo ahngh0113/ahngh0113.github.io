@@ -98,17 +98,17 @@
 <h1 id="nextjs에서-fetch를-logging하는-법">Next.js에서 fetch를 logging하는 법</h1>
 <hr />
 
-<pre><code class="language-mjs">/** @type {import('next').NextConfig} */
-const nextConfig = {
-  logging: {
-    fetches: {
-      fullUrl: true,
-    },
-  },
-};
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/** @type {import('next').NextConfig} */</span>
+<span class="kd">const</span> <span class="nx">nextConfig</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">logging</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">fetches</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">fullUrl</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
 
-export default nextConfig;
-</code></pre>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">nextConfig</span><span class="p">;</span>
+</code></pre></div></div>
 <p><code class="language-plaintext highlighter-rouge">next.config.mjs</code>파일에 위와 같이 <code class="language-plaintext highlighter-rouge">logging</code>옵션을 추가해 주면 터미널에서 확인 할 수 있다.</p>
 
 <h1 id="nextjs의-fetch-옵션">Next.js의 fetch() 옵션</h1>

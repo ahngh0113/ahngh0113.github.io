@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-03T22:08:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">안기환</title><subtitle>프론트엔드 개발자</subtitle><entry><title type="html">Nest.js에서 데이터 캐시하기 with App-Router</title><link href="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html" rel="alternate" type="text/html" title="Nest.js에서 데이터 캐시하기 with App-Router" /><published>2024-10-03T21:12:45+09:00</published><updated>2024-10-03T21:12:45+09:00</updated><id>http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0%20with%20App-Router</id><content type="html" xml:base="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html"><![CDATA[<h1 id="목차">목차</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-03T22:12:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">안기환</title><subtitle>프론트엔드 개발자</subtitle><entry><title type="html">Nest.js에서 데이터 캐시하기 with App-Router</title><link href="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html" rel="alternate" type="text/html" title="Nest.js에서 데이터 캐시하기 with App-Router" /><published>2024-10-03T21:12:45+09:00</published><updated>2024-10-03T21:12:45+09:00</updated><id>http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0%20with%20App-Router</id><content type="html" xml:base="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html"><![CDATA[<h1 id="목차">목차</h1>
 <hr />
 
 <ul>
@@ -21,17 +21,17 @@
 <h1 id="nextjs에서-fetch를-logging하는-법">Next.js에서 fetch를 logging하는 법</h1>
 <hr />
 
-<pre><code class="language-mjs">/** @type {import('next').NextConfig} */
-const nextConfig = {
-  logging: {
-    fetches: {
-      fullUrl: true,
-    },
-  },
-};
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/** @type {import('next').NextConfig} */</span>
+<span class="kd">const</span> <span class="nx">nextConfig</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">logging</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">fetches</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">fullUrl</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
 
-export default nextConfig;
-</code></pre>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">nextConfig</span><span class="p">;</span>
+</code></pre></div></div>
 <p><code class="language-plaintext highlighter-rouge">next.config.mjs</code>파일에 위와 같이 <code class="language-plaintext highlighter-rouge">logging</code>옵션을 추가해 주면 터미널에서 확인 할 수 있다.</p>
 
 <h1 id="nextjs의-fetch-옵션">Next.js의 fetch() 옵션</h1>
