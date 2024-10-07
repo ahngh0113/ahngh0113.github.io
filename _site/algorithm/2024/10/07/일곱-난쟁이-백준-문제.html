@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="안기환" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>안기환</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+  <div class="sidebar-brand">
+    <a href="/">안기환</a>
+  </div>
+  <p class="lead">프론트엔드 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+  <ul class="nav">
+    <li class="nav-title">Pages</li>
+    <li>
+      <a class="nav-item" href="/">Articles</a>
+    </li>
+         
+    <li>
+      <a class="nav-item" href="/about/"> About </a>
+    </li>
+              
+  </ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  <ul class="nav">
+    <li class="nav-title">Categories</li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#JavaScript"
+      >
+        <span class="name">JavaScript</span>
+        <span class="badge">1</span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#Next.js"
+      >
+        <span class="name">Next.js</span>
+        <span class="badge">2</span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#React"
+      >
+        <span class="name">React</span>
+        <span class="badge">1</span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        class="nav-item"
+        href="/category/#algorithm"
+      >
+        <span class="name">algorithm</span>
+        <span class="badge">1</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+
+		</div>
+		<div class="content">
+			<article class="post">
+  <header class="post-header">
+    <div class="post-title">일곱 난쟁이 - 백준 문제풀이</div>
+    <time
+      class="post-date dt-published"
+      datetime="2024-10-07T12:12:00+09:00"
+      itemprop="datePublished"
+    >2024/10/07
+    </time>
+  </header>
+
+  <div class="post-content"><h1 id="목차">목차</h1>
+<ul>
+  <li><a href="#문제">문제</a></li>
+  <li><a href="#내가-생각한-포인트">내가 생각한 포인트</a></li>
+  <li><a href="#나의-과정">나의 과정</a></li>
+  <li><a href="#추가-신경쓸-부분">추가 신경쓸 부분</a></li>
+  <li><a href="#나의-코드">나의 코드</a></li>
+</ul>
+
+<h1 id="문제">문제</h1>
+
+<blockquote>
+  <p><a href="https://www.acmicpc.net/problem/2309">백준 문제 - 일곱 난쟁이(2309)</a></p>
+</blockquote>
+
+<details>
+
+<summary>
+문제 내용 보기
+</summary>
+
+문제 <br />
+<br />
+왕비를 피해 일곱 난쟁이들과 함께 평화롭게 생활하고 있던 백설공주에게 위기가 찾아왔다. 일과를 마치고 돌아온 난쟁이가 일곱 명이 아닌 아홉 명이었던 것이다.<br />
+아홉 명의 난쟁이는 모두 자신이 "백설 공주와 일곱 난쟁이"의 주인공이라고 주장했다. 뛰어난 수학적 직관력을 가지고 있던 백설공주는, 다행스럽게도 일곱 난쟁이의 키의 합이 100이 됨을 기억해 냈다.<br />
+아홉 난쟁이의 키가 주어졌을 때, 백설공주를 도와 일곱 난쟁이를 찾는 프로그램을 작성하시오.
+<br /><br />
+입력 <br />
+<br />
+아홉 개의 줄에 걸쳐 난쟁이들의 키가 주어진다. 주어지는 키는 100을 넘지 않는 자연수이며, 아홉 난쟁이의 키는 모두 다르며, 가능한 정답이 여러 가지인 경우에는 아무거나 출력한다.<br />
+<br />
+출력 <br />
+<br />
+일곱 난쟁이의 키를 오름차순으로 출력한다. 일곱 난쟁이를 찾을 수 없는 경우는 없다.
+</details>
+<p><br /></p>
+
+<h1 id="내가-생각한-포인트">내가 생각한 포인트</h1>
+
+<ol>
+  <li>키의 합이 100</li>
+  <li>7명</li>
+  <li>오름차순 출력</li>
+</ol>
+
+<h1 id="나의-과정">나의 과정</h1>
+
+<p>나는 <code class="language-plaintext highlighter-rouge">7명</code>과 <code class="language-plaintext highlighter-rouge">합이 100</code>이라는 점을 생각하여 <code class="language-plaintext highlighter-rouge">slice()</code>를 이용하여 7명을 맞추고 <code class="language-plaintext highlighter-rouge">reduce()</code>를 이용해서 그 합이 100이 되는 것을 찾으려고 했다. 하지만 문제는 <code class="language-plaintext highlighter-rouge">랜덤으로 7명이 아닌 고정된 값으로 7명</code>을 찾으려고 했으니 실패를 하였다.</p>
+
+<p>그래서 문제를 조금 다르게 접근해 봤다. 9명 중 7명만 포함이니 이중 for문으로 두명의 합이 받은 input값의 합에서 100을 뺀 값이랑 같으면 두 수를 저장하고 input에서 두 수를 제외한 배열에 sort()를 통해 오름차순 출력을 해주면 정답이 되었다.</p>
+
+<h1 id="추가-신경쓸-부분">추가 신경쓸 부분</h1>
+<p>데이터 타입도 신경을 써줘야 했다. 당연히 숫자 타입이라고 생각했는데 문자 타입으로 출력되어 불필요한 시간을 소요했다.</p>
+
+<h1 id="나의-코드">나의 코드</h1>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">shortPerson</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nf">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">/dev/stdin</span><span class="dl">'</span><span class="p">).</span><span class="nf">toString</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span> 
+
+<span class="kd">const</span> <span class="nx">limit</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1">// 받은 input의 합에서 100을 뺀 값</span>
+<span class="kd">const</span> <span class="nx">totalMinlimit</span> <span class="o">=</span> <span class="p">(</span><span class="nx">shortPerson</span><span class="p">.</span><span class="nf">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">cur</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span> <span class="o">-</span> <span class="nx">limit</span>
+
+<span class="kd">let</span> <span class="nx">remove</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">// 이중 for문으로 두 수의 합이 totalMinlimit인 것을 찾는 코드</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">shortPerson</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">iShortPerson</span> <span class="o">=</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">shortPerson</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">shortPerson</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">jShortPerson</span> <span class="o">=</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">shortPerson</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">iShortPerson</span> <span class="o">+</span> <span class="nx">jShortPerson</span> <span class="o">===</span> <span class="nx">totalMinlimit</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">remove</span> <span class="o">=</span> <span class="p">[</span><span class="nx">iShortPerson</span><span class="p">,</span> <span class="nx">jShortPerson</span><span class="p">]</span>
+      <span class="k">break</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 찾은 두수를 제외한 값과 sort()를 통한 내림차순 구현</span>
+<span class="kd">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">shortPerson</span><span class="p">.</span><span class="nf">filter</span><span class="p">((</span><span class="nx">person</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">remove</span><span class="p">.</span><span class="nf">includes</span><span class="p">(</span><span class="nc">Number</span><span class="p">(</span><span class="nx">person</span><span class="p">))).</span><span class="nf">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">)</span>
+
+<span class="nx">answer</span><span class="p">.</span><span class="nf">forEach</span><span class="p">((</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>
+</div>
+</article>
+
+
+		</div>
+	</div>
+  </body>
+</html>

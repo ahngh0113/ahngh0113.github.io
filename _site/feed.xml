@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-03T22:12:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">안기환</title><subtitle>프론트엔드 개발자</subtitle><entry><title type="html">Nest.js에서 데이터 캐시하기 with App-Router</title><link href="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html" rel="alternate" type="text/html" title="Nest.js에서 데이터 캐시하기 with App-Router" /><published>2024-10-03T21:12:45+09:00</published><updated>2024-10-03T21:12:45+09:00</updated><id>http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0%20with%20App-Router</id><content type="html" xml:base="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html"><![CDATA[<h1 id="목차">목차</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-07T16:01:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">안기환</title><subtitle>프론트엔드 개발자</subtitle><entry><title type="html">일곱 난쟁이 - 백준 문제풀이</title><link href="http://localhost:4000/algorithm/2024/10/07/%EC%9D%BC%EA%B3%B1-%EB%82%9C%EC%9F%81%EC%9D%B4-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C.html" rel="alternate" type="text/html" title="일곱 난쟁이 - 백준 문제풀이" /><published>2024-10-07T12:12:00+09:00</published><updated>2024-10-07T12:12:00+09:00</updated><id>http://localhost:4000/algorithm/2024/10/07/%EC%9D%BC%EA%B3%B1%20%EB%82%9C%EC%9F%81%EC%9D%B4-%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/algorithm/2024/10/07/%EC%9D%BC%EA%B3%B1-%EB%82%9C%EC%9F%81%EC%9D%B4-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C.html"><![CDATA[<h1 id="목차">목차</h1>
+<ul>
+  <li><a href="#문제">문제</a></li>
+  <li><a href="#내가-생각한-포인트">내가 생각한 포인트</a></li>
+  <li><a href="#나의-과정">나의 과정</a></li>
+  <li><a href="#추가-신경쓸-부분">추가 신경쓸 부분</a></li>
+  <li><a href="#나의-코드">나의 코드</a></li>
+</ul>
+
+<h1 id="문제">문제</h1>
+
+<blockquote>
+  <p><a href="https://www.acmicpc.net/problem/2309">백준 문제 - 일곱 난쟁이(2309)</a></p>
+</blockquote>
+
+<details>
+
+<summary>
+문제 내용 보기
+</summary>
+
+문제 <br />
+<br />
+왕비를 피해 일곱 난쟁이들과 함께 평화롭게 생활하고 있던 백설공주에게 위기가 찾아왔다. 일과를 마치고 돌아온 난쟁이가 일곱 명이 아닌 아홉 명이었던 것이다.<br />
+아홉 명의 난쟁이는 모두 자신이 "백설 공주와 일곱 난쟁이"의 주인공이라고 주장했다. 뛰어난 수학적 직관력을 가지고 있던 백설공주는, 다행스럽게도 일곱 난쟁이의 키의 합이 100이 됨을 기억해 냈다.<br />
+아홉 난쟁이의 키가 주어졌을 때, 백설공주를 도와 일곱 난쟁이를 찾는 프로그램을 작성하시오.
+<br /><br />
+입력 <br />
+<br />
+아홉 개의 줄에 걸쳐 난쟁이들의 키가 주어진다. 주어지는 키는 100을 넘지 않는 자연수이며, 아홉 난쟁이의 키는 모두 다르며, 가능한 정답이 여러 가지인 경우에는 아무거나 출력한다.<br />
+<br />
+출력 <br />
+<br />
+일곱 난쟁이의 키를 오름차순으로 출력한다. 일곱 난쟁이를 찾을 수 없는 경우는 없다.
+</details>
+<p><br /></p>
+
+<h1 id="내가-생각한-포인트">내가 생각한 포인트</h1>
+
+<ol>
+  <li>키의 합이 100</li>
+  <li>7명</li>
+  <li>오름차순 출력</li>
+</ol>
+
+<h1 id="나의-과정">나의 과정</h1>
+
+<p>나는 <code class="language-plaintext highlighter-rouge">7명</code>과 <code class="language-plaintext highlighter-rouge">합이 100</code>이라는 점을 생각하여 <code class="language-plaintext highlighter-rouge">slice()</code>를 이용하여 7명을 맞추고 <code class="language-plaintext highlighter-rouge">reduce()</code>를 이용해서 그 합이 100이 되는 것을 찾으려고 했다. 하지만 문제는 <code class="language-plaintext highlighter-rouge">랜덤으로 7명이 아닌 고정된 값으로 7명</code>을 찾으려고 했으니 실패를 하였다.</p>
+
+<p>그래서 문제를 조금 다르게 접근해 봤다. 9명 중 7명만 포함이니 이중 for문으로 두명의 합이 받은 input값의 합에서 100을 뺀 값이랑 같으면 두 수를 저장하고 input에서 두 수를 제외한 배열에 sort()를 통해 오름차순 출력을 해주면 정답이 되었다.</p>
+
+<h1 id="추가-신경쓸-부분">추가 신경쓸 부분</h1>
+<p>데이터 타입도 신경을 써줘야 했다. 당연히 숫자 타입이라고 생각했는데 문자 타입으로 출력되어 불필요한 시간을 소요했다.</p>
+
+<h1 id="나의-코드">나의 코드</h1>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">shortPerson</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nf">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">/dev/stdin</span><span class="dl">'</span><span class="p">).</span><span class="nf">toString</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span> 
+
+<span class="kd">const</span> <span class="nx">limit</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1">// 받은 input의 합에서 100을 뺀 값</span>
+<span class="kd">const</span> <span class="nx">totalMinlimit</span> <span class="o">=</span> <span class="p">(</span><span class="nx">shortPerson</span><span class="p">.</span><span class="nf">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">cur</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span> <span class="o">-</span> <span class="nx">limit</span>
+
+<span class="kd">let</span> <span class="nx">remove</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">// 이중 for문으로 두 수의 합이 totalMinlimit인 것을 찾는 코드</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">shortPerson</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">iShortPerson</span> <span class="o">=</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">shortPerson</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">shortPerson</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">jShortPerson</span> <span class="o">=</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">shortPerson</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">iShortPerson</span> <span class="o">+</span> <span class="nx">jShortPerson</span> <span class="o">===</span> <span class="nx">totalMinlimit</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">remove</span> <span class="o">=</span> <span class="p">[</span><span class="nx">iShortPerson</span><span class="p">,</span> <span class="nx">jShortPerson</span><span class="p">]</span>
+      <span class="k">break</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 찾은 두수를 제외한 값과 sort()를 통한 내림차순 구현</span>
+<span class="kd">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">shortPerson</span><span class="p">.</span><span class="nf">filter</span><span class="p">((</span><span class="nx">person</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">remove</span><span class="p">.</span><span class="nf">includes</span><span class="p">(</span><span class="nc">Number</span><span class="p">(</span><span class="nx">person</span><span class="p">))).</span><span class="nf">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">)</span>
+
+<span class="nx">answer</span><span class="p">.</span><span class="nf">forEach</span><span class="p">((</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="algorithm" /><summary type="html"><![CDATA[목차 문제 내가 생각한 포인트 나의 과정 추가 신경쓸 부분 나의 코드]]></summary></entry><entry><title type="html">Nest.js에서 fetch 캐시하기 with App-Router</title><link href="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-fetch-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html" rel="alternate" type="text/html" title="Nest.js에서 fetch 캐시하기 with App-Router" /><published>2024-10-03T21:12:45+09:00</published><updated>2024-10-03T21:12:45+09:00</updated><id>http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C%20fetch%20%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0%20with%20App-Router</id><content type="html" xml:base="http://localhost:4000/next.js/2024/10/03/Nest.js%EC%97%90%EC%84%9C-fetch-%EC%BA%90%EC%8B%9C%ED%95%98%EA%B8%B0-with-App-Router.html"><![CDATA[<h1 id="목차">목차</h1>
 <hr />
 
 <ul>
@@ -11,6 +95,7 @@
       <li><a href="#특정-요청이-들어-왔을-때에-다시-fetch">특정 요청이 들어 왔을 때에 다시 fetch</a></li>
     </ul>
   </li>
+  <li><a href="#request-memoization">Request Memoization</a></li>
 </ul>
 
 <h1 id="일반-fetch-vs-nextjs-fetch">일반 fetch() vs Next.js fetch()</h1>
@@ -58,7 +143,41 @@
 <h2 id="특정-요청이-들어-왔을-때에-다시-fetch">특정 요청이 들어 왔을 때에 다시 fetch</h2>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">next</span><span class="p">:</span> <span class="p">{</span> <span class="na">tags</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">]}})</span>
 </code></pre></div></div>
-<p>Page-Router의 On-Demand ISR과 비슷한 방식이다. 처음 요청 시 데이터를 캐시하고, 특정 요청 시 있을 때 갈아끼우는 형식이다. 가끔 변하는 데이터를 핸들링할 때 편리한 옵션이다.</p>]]></content><author><name></name></author><category term="Next.js" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">리액트 컴포넌트는 왜 대문자로 시작해야 하는가?</title><link href="http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%99%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80.html" rel="alternate" type="text/html" title="리액트 컴포넌트는 왜 대문자로 시작해야 하는가?" /><published>2024-09-30T21:23:45+09:00</published><updated>2024-09-30T21:23:45+09:00</updated><id>http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94%20%EC%99%9C%20%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C%20%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC%20%ED%95%98%EB%8A%94%EA%B0%80</id><content type="html" xml:base="http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%99%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80.html"><![CDATA[<h1 id="목차">목차</h1>
+<p>Page-Router의 On-Demand ISR과 비슷한 방식이다. 처음 요청 시 데이터를 캐시하고, 특정 요청 시 있을 때 갈아끼우는 형식이다. 가끔 변하는 데이터를 핸들링할 때 편리한 옵션이다.</p>
+
+<h1 id="request-memoization">Request Memoization</h1>
+<hr />
+
+<p>Next.js에는 여러 컴포넌트의 모음이다. 만약 각 컴포넌트에 동일 fetch가 있다고 가정하면 어떻게 될까?<br /></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">AComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">cache</span><span class="p">:</span> <span class="dl">'</span><span class="s1">no-store</span><span class="dl">'</span> <span class="p">})</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">BComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">cache</span><span class="p">:</span> <span class="dl">'</span><span class="s1">no-store</span><span class="dl">'</span> <span class="p">})</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">CComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.vercel.app/blog</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">cache</span><span class="p">:</span> <span class="dl">'</span><span class="s1">no-store</span><span class="dl">'</span> <span class="p">})</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">Page</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">AComponent</span><span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">BComponent</span><span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">CComponent</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Next.js에서는 이러한 경우 모든 fetch를 요청하는 것이 아닌 하나의 요청만 캐시하고 나머지는 캐시된 데이터를 전달한다. 이것은 위에서 보았던 fetch의 캐시 영역이랑은 조금 별개의 영역이다. fetch()에서 제공하는 것이 아닌 Next.js에서 제공해주는 최적화이다. <br />
+이렇게 렌더링이 끝나면 fetch cache와는 다르게 데이터는 보관하지 않고 사라진다.</p>]]></content><author><name></name></author><category term="Next.js" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">리액트 컴포넌트는 왜 대문자로 시작해야 하는가?</title><link href="http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%99%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80.html" rel="alternate" type="text/html" title="리액트 컴포넌트는 왜 대문자로 시작해야 하는가?" /><published>2024-09-30T21:23:45+09:00</published><updated>2024-09-30T21:23:45+09:00</updated><id>http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94%20%EC%99%9C%20%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C%20%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC%20%ED%95%98%EB%8A%94%EA%B0%80</id><content type="html" xml:base="http://localhost:4000/react/2024/09/30/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%99%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80.html"><![CDATA[<h1 id="목차">목차</h1>
 <hr />
 
 <ul>
@@ -252,4 +371,159 @@ The tag <code class="language-plaintext highlighter-rouge">&lt;bCompo&gt;</code>
 <h1 id="결론">결론</h1>
 <hr />
 
-<p>아직 <code class="language-plaintext highlighter-rouge">Private</code>와 <code class="language-plaintext highlighter-rouge">Public</code>구분하여 사용할 이유를 찾기 못했다. 일단 <code class="language-plaintext highlighter-rouge">Public</code>으로 사용하여 문제가 없도록 하는게 좋을 것 같다.</p>]]></content><author><name></name></author><category term="Next.js" /><summary type="html"><![CDATA[목차]]></summary></entry></feed>
+<p>아직 <code class="language-plaintext highlighter-rouge">Private</code>와 <code class="language-plaintext highlighter-rouge">Public</code>구분하여 사용할 이유를 찾기 못했다. 일단 <code class="language-plaintext highlighter-rouge">Public</code>으로 사용하여 문제가 없도록 하는게 좋을 것 같다.</p>]]></content><author><name></name></author><category term="Next.js" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">JavaScript의 변수는 껍데기 일뿐?</title><link href="http://localhost:4000/javascript/2024/07/31/JavaScript%EC%9D%98-%EB%B3%80%EC%88%98%EB%8A%94-%EA%BB%8D%EB%8D%B0%EA%B8%B0-%EC%9D%BC%EB%BF%90.html" rel="alternate" type="text/html" title="JavaScript의 변수는 껍데기 일뿐?" /><published>2024-07-31T21:12:00+09:00</published><updated>2024-07-31T21:12:00+09:00</updated><id>http://localhost:4000/javascript/2024/07/31/JavaScript%EC%9D%98%20%EB%B3%80%EC%88%98%EB%8A%94%20%EA%BB%8D%EB%8D%B0%EA%B8%B0%20%EC%9D%BC%EB%BF%90</id><content type="html" xml:base="http://localhost:4000/javascript/2024/07/31/JavaScript%EC%9D%98-%EB%B3%80%EC%88%98%EB%8A%94-%EA%BB%8D%EB%8D%B0%EA%B8%B0-%EC%9D%BC%EB%BF%90.html"><![CDATA[<h1 id="목차">목차</h1>
+<ul>
+  <li><a href="#흔한-변수에-대한-오해">흔한 변수에 대한 오해</a></li>
+  <li><a href="#변수의-두-얼굴">변수의 두 얼굴</a></li>
+  <li><a href="#메모리-공간의-이름-변수명">메모리 공간의 이름, 변수명</a></li>
+  <li><a href="#데이터를-복붙하여-사용">데이터를 복붙하여 사용</a></li>
+  <li><a href="#결론">결론</a></li>
+</ul>
+
+<h1 id="흔한-변수에-대한-오해">흔한 변수에 대한 오해</h1>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<p>위의 코드를 보면 우리는 <code class="language-plaintext highlighter-rouge">name</code>이라는 변수에 <code class="language-plaintext highlighter-rouge">홍길동</code>이라는 데이터가 들어갈 것이라고 생각한다.<br />
+하지만 디테일하게 말하면 틀린 말이다.</p>
+
+<h1 id="변수의-두-얼굴">변수의 두 얼굴</h1>
+<p>변수의 의미는 <code class="language-plaintext highlighter-rouge">변할 수 있는 수</code>이다. 여기서 말하는 <code class="language-plaintext highlighter-rouge">수</code>는 <code class="language-plaintext highlighter-rouge">데이터</code>를 뜻한다.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<p>위의 코드에서 <code class="language-plaintext highlighter-rouge">name</code>은 큰 의미에서 <code class="language-plaintext highlighter-rouge">변수</code>이지만, 디데일하게 얘기하면 <code class="language-plaintext highlighter-rouge">식별자</code>, <code class="language-plaintext highlighter-rouge">변수명</code>이다. <br />
+사실 우리가 흔히 말하는 변수(<code class="language-plaintext highlighter-rouge">name</code>)는 <code class="language-plaintext highlighter-rouge">하나의 공간</code>을 뜻한다. 그 공간에 이름을 붙여준 것이 <code class="language-plaintext highlighter-rouge">식별자</code>, <code class="language-plaintext highlighter-rouge">변수명</code>인 것이다.</p>
+
+<p>여기서 말하는 <code class="language-plaintext highlighter-rouge">하나의 공간</code>은 <code class="language-plaintext highlighter-rouge">메모리</code>를 뜻한다. 모든 <code class="language-plaintext highlighter-rouge">수(데이터)</code>는 <code class="language-plaintext highlighter-rouge">메모리</code>에 올라간다. 그 <code class="language-plaintext highlighter-rouge">메모리 주소를 이름으로 매핑</code>한 것이 <code class="language-plaintext highlighter-rouge">식별자</code>, <code class="language-plaintext highlighter-rouge">변수명</code>인 것이다.</p>
+
+<h1 id="메모리-공간의-이름-변수명">메모리 공간의 이름, 변수명</h1>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<p>위의 코드에서 <code class="language-plaintext highlighter-rouge">name</code>은 1001이라는 주소(임의의 메모리 주소)에 할당된다. 1001의 데이터는 변수명(식별자)인 <code class="language-plaintext highlighter-rouge">name</code>이 들어가고 값으로 5001이라는 <code class="language-plaintext highlighter-rouge">데이터 할당 메모리 주소 값</code>이 들어간다.</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>메모리 주소</th>
+      <th>데이터</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1002</td>
+      <td>이름: name, 값: 5001</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>5001</td>
+      <td>‘홍길동’</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="데이터를-복붙하여-사용">데이터를 복붙하여 사용</h1>
+<p>위의 내용과 표처럼 메모리 주소의 이름을 붙여준 것이 변수명이고, 값은 또 다른 메모리 주소를 갖는다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">personA</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+<span class="kd">const</span> <span class="nx">personB</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<p>만약 위와 같이 동명이인을 코드로 표현하면 우리는 흔히 <code class="language-plaintext highlighter-rouge">홍길동</code>이 두번 만들어져서 대입되는 줄 안다. 하지만 그것은 틀렸다.</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>메모리 주소</th>
+      <th>데이터</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1002</td>
+      <td>이름: personA, 값: 5001</td>
+    </tr>
+    <tr>
+      <td>1003</td>
+      <td>이름: personB, 값: 5001</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>5001</td>
+      <td>‘홍길동’</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>위의 표와 같이 값이 복사되는 것이 아닌 메모리 주소 값이 복사되는 것이여서 결국 <code class="language-plaintext highlighter-rouge">홍길동</code>이라는 데이터는 하나이다.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">personA</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+<span class="kd">let</span> <span class="nx">personB</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+
+<span class="nx">personA</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">이순신</span><span class="dl">'</span>
+</code></pre></div></div>
+<p>만약 위에 같이 똑같았던 두 개의 변수 중 하나의 값이 변경하면 어떻게 될까?</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>메모리 주소</th>
+      <th>데이터</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1002</td>
+      <td>이름: personA, 값: 5002</td>
+    </tr>
+    <tr>
+      <td>1003</td>
+      <td>이름: personB, 값: 5001</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>5001</td>
+      <td>‘홍길동’</td>
+    </tr>
+    <tr>
+      <td>5002</td>
+      <td>‘이순신’</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>새로운 데이터 영역의 메모리에 <code class="language-plaintext highlighter-rouge">이순신</code>을 만들어서 대입 후 <code class="language-plaintext highlighter-rouge">personA</code>라는 이름을 가진 메모리 주소의 값에 넣어준다.</p>
+
+<h1 id="결론">결론</h1>
+<blockquote>
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">홍길동</span><span class="dl">'</span>
+</code></pre></div>  </div>
+  <p>위의 코드를 보면 우리는 <code class="language-plaintext highlighter-rouge">name</code>이라는 변수에 <code class="language-plaintext highlighter-rouge">홍길동</code>이라는 데이터가 들어갈 것이라고 생각한다.<br />
+하지만 디테일하게 말하면 틀린 말이다.</p>
+</blockquote>
+
+<p>처음 했던 말을 좀 더 정확하게 얘기하면 위의 코드는 <code class="language-plaintext highlighter-rouge">메모리 주소의 이름을 name이라고 정하고, 그 이름의 데이터 값에 다른 메모리 주소에 '홍길동'이라는 값을 만들고 그 메모리 주소값을 대입하는 것</code>이 맞다.</p>]]></content><author><name></name></author><category term="JavaScript" /><summary type="html"><![CDATA[목차 흔한 변수에 대한 오해 변수의 두 얼굴 메모리 공간의 이름, 변수명 데이터를 복붙하여 사용 결론]]></summary></entry></feed>
